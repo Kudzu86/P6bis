@@ -1,0 +1,97 @@
+.film-container-best {
+    display: flex;
+    border: 2px solid #000;
+    color: #0e0e0e;
+    padding: 20px;
+    margin: 0px;
+    box-shadow: 3px 3px 4px black;
+}
+
+.film-image {
+    max-width: 200px; /* Ajuster la taille maximale de l'image */
+    min-width: 150px;
+    flex: 1;
+}
+
+.film-image img {
+    width: 100%;
+    height: auto;
+}
+
+.film-description {
+    flex: 2;
+    padding-left: 50px;
+    position: relative;
+}
+
+.film-description h2 {
+    margin: 0 0 10px 0;
+}
+
+.film-description p {
+    margin: 0 0 20px 0;
+}
+
+.bouton_details1 {
+    display: flex;
+    padding: 10px 20px;
+    background-color: rgb(204, 57, 57); /* Couleur du bouton */
+    color: #fff;
+    float: right;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 50px; /* Ajoute un espace entre la description et le bouton */
+    align-self: flex-end; /* Aligne le bouton à droite du conteneur */
+}
+
+.bouton_details1:hover {
+    background-color: #862d1e; /* Couleur au survol */
+}
+
+#bestfilm-description {
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 788px) {
+    p {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .film-container-best {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .film-image {
+        width: 100%; /* Le conteneur de l'image prend toute la largeur */
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Centre le contenu horizontalement */
+    }
+
+    .film-image img {
+        width: 100%; /* L'image prend toute la largeur du conteneur */
+        max-width: 100%; /* Limite la largeur maximale de l'image */
+        height: auto;
+        display: block; /* Supprime l'espace en bas de l'image causé par le comportement inline */
+        margin: 0 auto; /* Centre l'image horizontalement */
+    }
+
+    .film-description {
+        margin: 0;
+        padding-left: 0;
+        text-align: justify;
+    }
+
+    #bestfilm-description {
+        padding-top: 20px;
+    }
+
+    .bouton_details1 {
+        margin-top: 10px;
+        align-self: flex-start;
+    }
+}
+

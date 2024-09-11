@@ -1,0 +1,68 @@
+/* Styles pour le conteneur du header */
+.header-jsi {
+    width: 100%;
+    background-color: #719196; /* Fond bleu clair pour tout le header */
+    padding: 10px 0; /* Espacement autour du contenu */
+    box-shadow: 6px 6px 8px black;
+    text-shadow: 5px 5px 8px black;
+}
+
+/* Conteneur principal du header */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espace entre le logo et le texte */
+    width: 100%;
+    padding: 0 20px; /* Espacement interne */
+}
+
+/* Styles pour le lien contenant le logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles pour l'image du logo */
+.logo-image {
+    width: auto; /* Taille du logo */
+    max-height: 200px;
+}
+
+/* Styles pour le texte centré */
+.header-text {
+    flex: 1;
+    text-align: center;
+    font-size: 2em; /* Taille du texte */
+    color: #fafdfd; /* Couleur du texte */
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.header-text:hover {
+    color: rgb(190, 181, 183);
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 456px) {
+    .header-text {
+        display: none;
+    }
+    .header-text a {
+        display: none;
+    }
+    .header-content {
+        justify-content: center;
+    }
+    .logo-image {
+        justify-content: center; /* Centre le logo dans le conteneur */
+    }
+    .logo-link {
+        flex: 1; /* Permet au lien contenant le logo d'occuper tout l'espace disponible */
+        justify-content: center; /* Centre le logo horizontalement */
+    }
+}
+
+

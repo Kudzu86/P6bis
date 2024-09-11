@@ -1,0 +1,119 @@
+/* genres.css */
+
+/* Style pour le titre et l'accordéon */
+#genre {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.accordion-title {
+    flex: 1;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.accordion {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.accordion .arrow {
+    margin-left: 5px;
+}
+
+.accordion.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: max-height 0.3s ease;
+}
+
+.panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.panel ul li {
+    font-size: 1.5vw;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.panel ul li:last-child {
+    border-bottom: none;
+}
+
+.panel ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.panel ul li a:hover {
+    text-decoration: underline;
+}
+
+h2#genre {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 2.5vw; /* Taille du texte du titre */
+}
+
+h2#genre .accordion {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 1.5vw; /* Taille du texte de l'accordéon */
+    display: flex;
+    align-items: center;
+}
+
+h2#genre .accordion .arrow {
+    font-size: 1.5vw; /* Taille de la flèche */
+    transition: transform 0.3s ease;
+}
+
+h2#genre .accordion.active .arrow {
+    transform: rotate(180deg); /* Rotation pour l'état ouvert */
+}
+
+@media screen and (max-width: 788px) {
+    h2#genre {
+        font-size: 4vw;
+    }
+    h2#genre .accordion,
+    .panel ul li,
+    h2#genre .accordion .arrow {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    h2#genre {
+        font-size: 6vw;
+    }
+    h2#genre .accordion,
+    .panel ul li,
+    h2#genre .accordion .arrow {
+        font-size: 4vw;
+    }
+}

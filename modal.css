@@ -1,0 +1,179 @@
+/* Style pour la modale */
+.modal {
+    display: none; /* Cache la modale par défaut pour qu'elle ne soit visible que lorsqu'elle est activée */
+    position: fixed; /* Fixe la position de la modale par rapport à la fenêtre du navigateur */
+    z-index: 1000; /* Assure que la modale apparaît au-dessus du reste du contenu avec une haute priorité */
+    left: 0; /* Positionne la modale au bord gauche de l'écran */
+    top: 0; /* Positionne la modale au bord supérieur de l'écran */
+    width: 100%; /* Définit la largeur de la modale pour qu'elle couvre toute la largeur de l'écran */
+    height: 100%; /* Définit la hauteur de la modale pour qu'elle couvre toute la hauteur de l'écran */
+    overflow: auto; /* Ajoute une barre de défilement si le contenu de la modale dépasse la hauteur de l'écran */
+    background-color: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent noir pour obscurcir le contenu en arrière-plan */
+}
+
+/* Style pour le contenu de la modale */
+.modal-content {
+    font-size: 18px;
+    margin : 5px;
+    background-color: #fefefe; /* Définit un fond blanc pour le contenu de la modale */
+    margin: 2% auto; /* Centre verticalement la modale avec une marge de 2% par rapport au haut de l'écran */
+    padding: 30px; /* Ajoute un espacement intérieur de 20px autour du contenu */
+    border: 1px solid #888; /* Ajoute une bordure grise autour du contenu de la modale */
+    max-width: 700px; /* Limite la largeur maximale de la modale à 700px pour les écrans larges */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ajoute une ombre légère autour de la modale pour lui donner de la profondeur */
+    position: relative; /* Positionne la modale de manière relative à son conteneur pour gérer les éléments enfants */
+}
+
+.close-modal {
+    display: block; /* Assure que le bouton occupe toute la largeur du conteneur parent */
+    margin: 60px auto 0 auto; /* Centre horizontalement le bouton en bas de la modale */
+    padding: 10px 10px; /* Ajoute du padding pour agrandir le bouton */
+    background-color: rgb(236, 67, 67); /* Définit le fond rouge pour le bouton */
+    color: white; /* Texte blanc pour contraste */
+    font-size: 18px; /* Taille du texte du bouton */
+    font-weight: bold; /* Met en gras le texte du bouton */
+    text-align: center; /* Centre le texte du bouton */
+    border: none; /* Supprime les bordures par défaut */
+    border-radius: 5px; /* Arrondit légèrement les coins du bouton */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    width: 150px; /* Largeur fixe du bouton */
+}
+
+button {
+    border: none;
+}
+
+.close {
+    display: none;
+}
+
+.close:hover,
+.close-modal:hover {
+    background-color: darkred;
+}
+
+dialog {
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+figure {
+    margin: 5px;
+}
+
+/* Style pour les images dans la modale */
+#modal-image {
+    padding: 5px;
+    position: absolute; /* L'image sera positionnée en absolu par rapport à .modal-content */
+    width: 30%; /* L'image occupe 30% de la largeur du conteneur */
+    height: auto; /* La hauteur de l'image s'ajuste proportionnellement à sa largeur */
+    top: 30px; /* Espace par rapport au haut de .modal-content */
+    right: 30px; /* Espace par rapport à la droite de .modal-content */
+}
+
+/* Style pour les en-têtes et les sections de la modale */
+.modal-header,
+.modal-body,
+.modal-footer {
+    margin-bottom: 0px; /* Ajoute une marge de 15px en bas pour espacer les sections */
+}
+
+/* Style pour les sections de la modale (titre, infos, description) */
+.modal-header {
+    position: relative;
+    font-size: 26px; /* Taille du texte pour le titre */
+    font-weight: bold; /* Gras pour le titre */
+    text-align: left;}
+
+.modal-body {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 5px; /* Réduit l'espace entre les paragraphes */
+}
+
+.modal-body p {
+    margin: 5px;
+}
+
+/* Style pour les boutons dans la modale */
+.modal-footer {
+    text-align: right; /* Aligne le contenu du pied de page de la modale à droite */
+    margin-top: auto;
+}
+
+#modal-title {
+    font-size: 36px;
+    padding: 0px;
+    margin: 5px;
+}
+
+#modal-director {
+    padding-top: 50px;
+}
+#modal-summary {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+#modal-actors {
+    margin-top: 50px;
+}
+
+#modal-image-bis {
+    display: none;
+}
+
+
+@media screen and (max-width: 788px) {
+    #modal-image {
+        display: none;
+    }
+
+    .modal-header {
+        text-align: left; 
+    }
+
+    #modal-summary {
+        padding-top: 40px;
+    }
+    
+    #modal-directors {
+        padding-top: 20px;
+    }
+
+    #modal-director {
+        padding-top: 20px;
+    }
+
+    #modal-image-bis {
+        display: flex;
+        margin: auto;
+        margin-bottom: 50px;
+        max-width: 100%; /* L'image ne dépasse jamais la largeur de son conteneur */
+        height: auto; /* Maintient le rapport hauteur/largeur de l'image */
+        width: 70%; /* Ajuste la largeur automatiquement tout en maintenant le ratio */
+    }
+
+    .close-modal {
+        display: none;
+    }
+
+    .close {
+        display: flex;
+        background-color: rgb(236, 67, 67); /* Fond rouge */
+        color: white; /* Texte blanc pour contraste */
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 20px; /* Arrondit légèrement les coins du bouton */
+        position: absolute; /* Position absolue pour la placer */
+        top: 10px; /* Distance par rapport au haut de la modale */
+        right: 10px; /* Distance par rapport au côté droit de la modale */
+        z-index: 2000; /* Assure que la croix est au-dessus des autres éléments */
+    }
+    
+}
